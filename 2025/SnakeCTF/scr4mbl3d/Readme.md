@@ -3,7 +3,9 @@ You are given two files. The first is a Python script that encrypts a flag, and 
 Provided Files
 Here is the context and content of the files you were given:
 
+[source.py](https://github.com/marky333/CTF-Writeups/blob/main/2025/SnakeCTF/scr4mbl3d/source.py)
 
+[Output](https://github.com/marky333/CTF-Writeups/blob/main/2025/SnakeCTF/scr4mbl3d/out.txt)
 
 This was a fun cryptography challenge that involved analyzing a Python script to reverse an encryption scheme. The core of the challenge was identifying a classic cipher structure and dealing with a small, unknown parameter.
 
@@ -40,3 +42,11 @@ Check the Output: After running all rounds in reverse, we merge the chunks back 
 
 👨‍💻 Solution Script
 The following Python script implements this decryption strategy.
+
+[Decrypt Code](https://github.com/marky333/CTF-Writeups/blob/main/2025/SnakeCTF/scr4mbl3d/decrypt.py)
+
+On running the code i got the flag
+
+<img width="785" height="236" alt="image" src="https://github.com/user-attachments/assets/d71a2ad7-9c6f-41e4-be1f-63b93c5a0bf8" />
+
+snakeCTF{Ev3ry7hing_1s_34s13r_w1th_F3is7el_f150d1bcd4f05a7e}
