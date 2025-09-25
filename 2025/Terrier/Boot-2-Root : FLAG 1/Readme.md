@@ -8,6 +8,7 @@ Then gobuster to fuzz the website
 So we found /page exists, next we went into that site
 
 It was like this,
+
 <img width="839" height="286" alt="image" src="https://github.com/user-attachments/assets/02363902-0443-4740-8707-51672459a779" />
 
 So we used SSTI injection to find the list of files
