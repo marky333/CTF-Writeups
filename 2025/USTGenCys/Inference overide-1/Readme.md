@@ -58,8 +58,11 @@ This successfully elevated my privileges and granted me access to the "Gold" tie
 <img width="1042" height="382" alt="image" src="https://github.com/user-attachments/assets/b088260c-4a8e-41f2-bf5b-8a5b3b0e452f" />
 
 This exploit was successful due to a critical vulnerability known as **Insecure Direct Object Reference (IDOR)**, combined with initial information disclosure.
+
 **Information Disclosure**: The exposed robots.txt file and the Postman collection were the first mistakes. They gave away the internal API structure, naming conventions, and different access levels, providing a clear roadmap for the attack.
+
 **Broken Access Control (IDOR)**: The application's backend trusted user-supplied input (tier=gold) to determine the user's authorization level. There was no server-side validation to check if the currently logged-in user, johndoe, was actually supposed to have "gold" tier access. The application blindly granted access based on the parameter provided in the URL.
+
 A secure application should have determined the user's tier based on their session information stored on the server, not from a parameter that the user can control.
 
 
